@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de coches</title>
+</head>
+
+<body>
+    <p>
+        Concesionario
+        <button>Registro</button>
+        <button>Inicio Sesion</button>
+    <p>Tenemos una pagina principal con boton de inicio de sesion y o de registro.</p>
+    <p>Una vez se inice o registre el usuario en la pagina recogemos esos datos en una base de datos. Y se le redireje a 
+        una pagina donde se le muestra un catalogo de coches con un boton de comprar.
+    </p>
+    </p>
+    <p>
+        Tenemos los siguientes coches en stock: (que tambien estan alojados en una base de datos).
+    <ul>
+        <li>Seat Ibiza</li>
+        <li>Renault Clio</li>
+        <li>Ford Fiesta</li>
+        <li>Opel Corsa</li>
+        <li>Peugeot 208</li>
+    </ul>
+    <button>Comprar</button>
+    <p>El usario elige uno de los coches que se encuentra en el catalogo. Al elegir uno o varios de los siguientes
+        modelos de coches se le redirige a una pagina de pago donde se le pide que introduzca sus datos bancarios y de envio. Y se actualiza el
+        stock en la base de datos.
+    </p>
+    <p>En el caso en el que al elegir uno de los coches seleccionados este sin stock ya que en el servidor hay un
+        contador con el stock de cada uno de los modelos y se va actualizando conforme se van vendiendo los coches, se le informa
+        al usuario de que el coche no esta disponible y se le redirige a la pagina principal.
+    </p>
+    </p>
+    </p>
+
+    <h3>Cliente</h3>
+    <p>
+        - Muestro la página con los botones de registro e inicio de sesión.<br>
+        - El usuario puede navegar por el catálogo de coches.<br>
+        - Si pulsa en el boton"Comprar", se le abre un formulario para introducir sus datos personales y bancarios.
+    </p>
+    <h3>Servidor</h3>
+    <p>
+        - Recibe los datos del registro o inicio de sesion del usuario.<br>
+        - También gestiona la petición de compra: <br>
+        - Comprueba en la base de datos si hay stock.<br>
+        - Si hay stock, descuenta una unidad y confirma la compra.<br>
+        - Si no hay stock, envío un mensaje de error y redirije al usuario a la página principal.
+    </p>
+
+    <h3>Base de datos</h3>
+    <p>
+        - Guardo los usuarios (nombre, email, contraseña…).<br>
+        - Guardo los coches en stock (modelo, cantidad disponible, precio…).<br>
+        - Guardo las compras realizadas (usuario, coche comprado, fecha, etc.).<br>
+        - Actualizo los datos cada vez que alguien se registra, inicia sesión o compra un coche.
+    </p>
+</body>
+
+</html>
